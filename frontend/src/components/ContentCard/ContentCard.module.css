@@ -1,0 +1,99 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contentInfo {
+  padding: 15px 0px;
+}
+
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 유료 아이콘 */
+.subsIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+
+  background-color: rgba(255, 255, 255, 0.8); /* 반투명 흰 배경 */
+  border-radius: 50%;
+  padding: 4px;
+  box-sizing: content-box;
+  border: none;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 2줄 */
+  -webkit-box-orient: vertical;
+  transition: 0.2s ease;
+}
+
+.creator {
+  padding-top: 12px;
+  padding-left: 12px;
+  font-size: 13px;
+  color: #777;
+  z-index: 10;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 세로 정렬 추가 */
+  padding: 0 12px 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+.categories {
+  display: flex;
+  gap: 6px;
+}
+
+.category {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.likes {
+  color: #666666;
+  z-index: 10;
+}
+
+a:hover {
+  color: #749BC2;
+}

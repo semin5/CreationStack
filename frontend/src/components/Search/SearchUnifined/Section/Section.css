@@ -1,0 +1,39 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.section .creator-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  width: 100%;
+}
+
+.section .search-result-header-instance {
+  width: 100%;
+}
+
+.section .creator-card-list-instance {
+  width: 100%;
+}
+
+.section .arrow-up-right {
+  height: 24px;
+  width: 24px;
+}
+
+.no-search-result {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  padding: 100px 0;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

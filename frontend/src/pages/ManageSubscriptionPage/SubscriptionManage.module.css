@@ -1,0 +1,23 @@
+.subscription-manage {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 70px 0px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subscription-manage .subscribe-list-title {
+  color: #1f1d1b;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}

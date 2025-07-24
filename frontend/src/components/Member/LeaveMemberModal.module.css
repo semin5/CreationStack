@@ -1,0 +1,54 @@
+.title {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #23262a;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0;
+  tracking: 0;
+}
+
+.description {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #23262a;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0;
+  tracking: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.button {
+  width: 131px;
+  height: 47px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+.cancelButton {
+  composes: button;
+  color: #23262a;
+  border: 1px solid #dde1eb;
+  background-color: white;
+}
+
+.confirmButton {
+  composes: button;
+  color: white;
+  background-color: #4682a9;
+  box-shadow: 0px 2px 4px #4318d133;
+}
+
+.confirmButton:hover {
+  background-color: rgba(70, 130, 169, 0.9);
+}

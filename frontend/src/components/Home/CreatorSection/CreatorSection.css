@@ -1,0 +1,86 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px; /* 제목과 카드 사이 간격 */
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* 어두운 색상으로 고정 */
+  margin: 0;
+}
+
+.more-button {
+  background: none;
+  border: none;
+  color: #695ce9; /* 보라색으로 고정 */
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.more-button:hover {
+  background-color: rgba(105, 92, 233, 0.1); /* 호버 시 연한 보라색 배경 */
+}
+
+.section .creator-search {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-items: center;
+  width: 100%;
+}
+
+/* 반응형: 태블릿 */
+@media (max-width: 768px) {
+  .section .creator-search {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* 반응형: 모바일 */
+@media (max-width: 480px) {
+  .section .creator-search {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.section .search-result-header-instance {
+  width: 100%;
+}
+
+.section .creator-card-list-instance {
+  width: 100%;
+}
+
+.section .arrow-up-right {
+  height: 24px;
+  width: 24px;
+}
+
+.no-search-result {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  padding: 100px 0;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

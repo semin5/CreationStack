@@ -1,0 +1,17 @@
+.subscribed-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* 가운데 정렬 */
+  width: 70%;
+  position: relative;
+  padding: 24px 0; /* 위아래 여백 추가 */
+  flex-direction: column;
+}
+
+.subscribed-card .design-component-instance-node {
+  background-image: url(https://c.animaapp.com/md5g8ubjTWUbxD/img/ellipse-4.png) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,63 @@
+.search-result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.search-result-header .heading {
+  color: #000000;
+  font-family: var(--display-xs-semibold-font-family);
+  font-size: var(--display-xs-semibold-font-size);
+  font-style: var(--display-xs-semibold-font-style);
+  font-weight: var(--display-xs-semibold-font-weight);
+  letter-spacing: var(--display-xs-semibold-letter-spacing);
+  line-height: var(--display-xs-semibold-line-height);
+}
+
+.search-result-header .more-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 38.71px;
+  padding: 0 12px;
+}
+
+.search-result-header .overlap-group {
+  height: 16px;
+  position: relative;
+  top: 11px;
+}
+
+.search-result-header .label {
+  color: #23262a;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.search-result-header .chevron-down-icon {
+  height: 15px;
+  left: 67px;
+  position: absolute;
+  top: 1px;
+  width: 15px;
+}
+
+.search-result-header .vector {
+  width: 10px;
+  height: 6px;
+}
+.more-button .chevron-icon {
+  width: 10px;
+  height: 6px;
+  object-fit: contain;
+  color: #23262a;
+  vertical-align: middle; /* 또는 text-bottom / -2px 정도 수동 조정 */
+  position: relative;
+  top: -9px;
+}

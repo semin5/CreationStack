@@ -1,0 +1,79 @@
+.banner-section-wrapper {
+  align-items: center;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  height: 488px;
+  padding: 96px 0px;
+  position: relative;
+}
+
+.banner-section-wrapper .container {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0px 32px;
+  position: relative;
+  width: 1280px;
+}
+
+.banner-section-wrapper .content {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+}
+
+.banner-section-wrapper .head-support-form {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  width: 960px;
+}
+
+.banner-section-wrapper .head {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.banner-section-wrapper .head-text {
+  align-self: stretch;
+  color: #000000;
+  font-family: 'Poppins', Helvetica;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  line-height: 60px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+}
+
+.banner-section-wrapper .support-text {
+  color: #e0e0e0;
+  font-family: 'Poppins', Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+  width: 768px;
+}

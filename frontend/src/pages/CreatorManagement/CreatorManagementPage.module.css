@@ -1,0 +1,475 @@
+/* CreatorManagementPage 전체 컨테이너 */
+.creatorManagementPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* 섹션 간 간격 */
+  padding: 40px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 로딩 및 에러 메시지 */
+.loadingMessage,
+.errorMessage {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  padding: 50px;
+}
+
+.errorMessage {
+  color: #dc3545;
+}
+
+/* DashBoardSection 스타일 */
+.dashBoardSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1162px;
+  box-sizing: border-box;
+  padding: 28px 48px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashBoardTitle {
+  color: #1f1d1b;
+  font-family: "Poppins", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 48px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cardsContainer::-webkit-scrollbar {
+  display: none;
+
+}
+
+.memberCountCard,
+.newSubscriberCard,
+.profitCard,
+.newContentCard {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 119px;
+  flex: 1 0 275px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+}
+
+.memberCountCard:hover,
+.newSubscriberCard:hover,
+.profitCard:hover,
+.newContentCard:hover {
+  transform: translateY(-5px);
+}
+
+.overlapGroupCard {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+}
+
+.cardTitle {
+  color: #666666;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21px;
+  white-space: nowrap;
+}
+
+.countText {
+  color: #1f1d1b;
+  font-family: "Poppins", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 42px;
+  white-space: nowrap;
+}
+
+.countText2 {
+  color: #4682a9;
+  font-family: "Poppins", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 42px;
+  white-space: nowrap;
+}
+
+.profitText {
+  color: #1f1d1b;
+  font-family: "Poppins", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 42px;
+  white-space: nowrap;
+}
+
+.newContentCard {
+  background-color: #4682a9;
+  cursor: pointer;
+}
+
+.newContentCard:hover {
+  background-color: #3a6b8d;
+}
+
+.newContentOverlap {
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mainLabel {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.subLabel {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* PopularContent 스타일 */
+.popularContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1162px;
+  box-sizing: border-box;
+  padding: 24px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.overlapPopular {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.sectionTitle {
+  color: #1f1d1b;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+  margin-left: 0;
+}
+
+.contentList {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  width: 100%;
+}
+
+.cardItem {
+  background-color: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  height: 83px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cardItem:hover {
+  transform: translateY(-3px);
+}
+
+.overlapGroupContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.rankBadge {
+  height: 32px;
+  width: 32px;
+  background-color: #4682a9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.rankTextWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.rankText {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.titleTextContent {
+  color: #1f1d1b;
+  font-family: "Poppins", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.viewCountText {
+  color: #666666;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* 내 콘텐츠 관리 섹션 스타일 */
+.myContentManagementSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%; /* 화면 크기에 따라 유동적으로 너비 조절 */
+  max-width: 1200px; /* 최대 너비 제한 (1162px에서 1200px로 변경) */
+  margin: 0 auto; /* 가운데 정렬 추가 */
+  box-sizing: border-box;
+  padding: 0 16px; /* 패딩 조정 (24px에서 0 16px로 변경) */
+  background-color: #ffffff; /* 배경색 */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.myContentTitle {
+  color: #1f1d1b;
+  font-family: "Poppins", Helvetica;
+  font-size: 26px; /* 대시보드 제목보다 약간 작게 */
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 42px;
+  text-align: center;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .dashBoardSection,
+  .popularContent,
+  .myContentManagementSection {
+    max-width: 900px;
+  }
+
+  .cardsContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .memberCountCard,
+  .newSubscriberCard,
+  .profitCard,
+  .newContentCard {
+    flex: 1 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .creatorManagementPageContainer {
+    padding: 20px 15px;
+    gap: 30px;
+  }
+
+  .dashBoardTitle,
+  .sectionTitle,
+  .myContentTitle {
+    font-size: 24px;
+  }
+
+  .dashBoardSection,
+  .popularContent,
+  .myContentManagementSection {
+    padding: 20px;
+  }
+
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .memberCountCard,
+  .newSubscriberCard,
+  .profitCard,
+  .newContentCard {
+    width: 90%;
+    max-width: 400px;
+    flex: 0 0 auto;
+  }
+
+  .countText,
+  .countText2,
+  .profitText {
+    font-size: 30px;
+  }
+
+  .mainLabel {
+    font-size: 20px;
+  }
+
+  .subLabel {
+    font-size: 14px;
+  }
+
+  .cardItem {
+    padding: 0 15px;
+  }
+
+  .rankBadge {
+    width: 35px;
+    height: 35px;
+  }
+
+  .rankText {
+    font-size: 18px;
+  }
+
+  .titleTextContent {
+    font-size: 16px;
+  }
+
+  .viewCountText {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .creatorManagementPageContainer {
+    padding: 15px 10px;
+    gap: 25px;
+  }
+
+  .dashBoardTitle,
+  .sectionTitle,
+  .myContentTitle {
+    font-size: 20px;
+  }
+
+  .dashBoardSection,
+  .popularContent,
+  .myContentManagementSection {
+    padding: 15px;
+  }
+
+  .memberCountCard,
+  .newSubscriberCard,
+  .profitCard,
+  .newContentCard,
+  .cardItem {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .countText,
+  .countText2,
+  .profitText {
+    font-size: 28px;
+  }
+
+  .mainLabel {
+    font-size: 18px;
+  }
+
+  .subLabel {
+    font-size: 12px;
+  }
+
+  .rankBadge {
+    width: 30px;
+    height: 30px;
+  }
+
+  .rankText {
+    font-size: 16px;
+  }
+
+  .titleTextContent {
+    font-size: 15px;
+  }
+
+  .viewCountText {
+    font-size: 12px;
+  }
+}

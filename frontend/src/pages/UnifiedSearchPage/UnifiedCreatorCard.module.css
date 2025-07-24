@@ -1,0 +1,55 @@
+.creatorCard {
+  background-color: #F9FAFB;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profileImage {
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+}
+
+.textSection {
+  text-align: center;
+}
+
+.name {
+  color: #101828;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.job {
+  color: #6941C6;
+  font-family: "Poppins", Helvetica;
+  font-size: 16px;
+}
+
+.subscriberCount {
+  color: #757575;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+}
+
+.description {
+  color: #667085;
+  font-size: 16px;
+  line-height: 24px;
+  max-height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  text-align: justify;
+}

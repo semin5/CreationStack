@@ -1,0 +1,261 @@
+/* MemberRegister.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  gap: 50px;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 140px;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.logoContainer {
+  position: relative;
+  width: 107px;
+  height: 107px;
+  background-image: url('https://c.animaapp.com/md58ogpbjLJ0MJ/img/mask-group.png');
+  background-size: 100% 100%;
+}
+
+.logoInner {
+  position: relative;
+  height: 107px;
+  background-image: url('https://c.animaapp.com/md58ogpbjLJ0MJ/img/mask-group-1.svg');
+  background-size: 100% 100%;
+}
+
+.logoImage {
+  position: absolute;
+  width: 107px;
+  height: 107px;
+  top: 0;
+  left: 0;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  margin-top: -1px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 600;
+  color: #101828;
+  font-size: 2.25rem;
+  text-align: center;
+  letter-spacing: -0.72px;
+  line-height: 44px;
+}
+
+.subtitleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.subtitle {
+  margin-top: -1px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  color: #667085;
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 20px 0;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 430px;
+}
+
+.radioOption {
+  position: relative;
+}
+
+.radioButton {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px solid #dde1eb;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.radioButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.radioButton[data-state='checked'] {
+  border-color: #4682a9;
+  background-color: #4682a9;
+}
+
+.radioIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.radioButton[data-state='checked'] .radioIndicator {
+  opacity: 1;
+}
+
+.radioLabel {
+  display: flex;
+  width: 100%;
+  height: 86px;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dde1eb;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  padding-right: 60px;
+}
+
+.radioLabel:hover {
+  border-color: #4682a9;
+  box-shadow: 0 0 0 1px rgba(70, 130, 169, 0.1);
+}
+
+.radioOption[data-selected='true'] .radioLabel {
+  border-color: #4682a9;
+  background-color: rgba(70, 130, 169, 0.05);
+}
+
+.radioContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+.optionTitle {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 600;
+  color: #101828;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 32px;
+  white-space: nowrap;
+}
+
+.optionDescription {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  color: #667085;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.nextButton {
+  width: 480px;
+  height: 56px;
+  background-color: #91c8e4;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.nextButton:hover {
+  background-color: #7ab8d8;
+}
+
+.nextButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.nextButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(145, 200, 228, 0.3);
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  max-width: 430px;
+}
+
+.backButton {
+  width: 100px;
+  height: 56px;
+  background-color: white;
+  border-radius: 8px;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: #f9fafb;
+  color: #4b5563;
+  border-color: #9ca3af;
+}
+
+.backButton:disabled {
+  background-color: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}

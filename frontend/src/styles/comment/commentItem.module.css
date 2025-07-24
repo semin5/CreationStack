@@ -1,0 +1,188 @@
+/* 공통 스타일 */
+.commentItem {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.reply {
+  margin-left: 48px;
+  padding-left: 16px;
+  margin-top: 8px;
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.avatarCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.commentMain {
+  flex: 1;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.username {
+  font-weight: 600;
+  color: #111827;
+}
+
+.userRole {
+  font-size: 12px;
+  padding: 2px 6px;
+  background-color: #f0f4ff;
+  color: #3b82f6;
+  border-radius: 4px;
+}
+
+.date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.commentContent {
+  margin-bottom: 8px;
+  font-size: 20x;
+  color: black;
+  line-height: 1.5;
+}
+
+.contentText {
+  white-space: pre-wrap;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.editTextarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 19px;
+  resize: none;
+  background-color: white;
+  color: black;
+  height: 100px;
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancelBtn {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.cancelBtn:hover {
+  color: #374151;
+}
+
+.commentFooter {
+  display: flex;
+  gap: 12px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionButton:hover {
+  color: #5073bf;
+  border-radius: 6px;
+}
+
+.actionButton.delete {
+  color: #ef4444;
+}
+
+.actionButton.delete:hover {
+  background-color: #fee2e2;
+}
+
+.liked {
+  color: #ef4444 !important;
+}
+
+.heartIcon {
+  font-size: 16px;
+}
+
+.replyForm {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.replyForm textarea {
+  width: 95%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: none;
+  font-family: inherit;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  height: 100px;
+}
+
+.replyActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.replyTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: black;
+}

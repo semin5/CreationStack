@@ -1,0 +1,72 @@
+.subscription_detail {
+  margin-bottom: 24px;
+}
+
+.detail_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  position: relative;
+}
+
+.detail_label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #1f1d1b;
+}
+
+.detail_value {
+  color: #666666;
+  font-size: 16px;
+}
+
+.bold_value {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1f1d1b;
+  line-height: 30px;
+}
+
+.highlighted_value {
+  font-weight: 600;
+  color: #4682a9;
+}
+
+.separator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 10px;
+  background-color: #e0e0e0; /* 연한 회색 선 */
+  height: 1px;
+}
+
+.benefits_box {
+  background-color: #f0f7fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.benefits_title {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.benefits_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefit_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: #666666;
+}

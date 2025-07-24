@@ -1,0 +1,416 @@
+/* Login.module.css */
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.innerContainer {
+  background-color: white;
+  width: 100%;
+  height: 900px;
+  padding: 0px 150px;
+}
+
+.mainContent {
+  position: relative;
+  height: 819px;
+}
+
+.blueBackground {
+  position: absolute;
+  width: 100%;
+  height: 458px;
+  top: 0;
+  left: 0;
+  background-color: #749BC2;
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  width: 542px;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px 0;
+  position: absolute;
+  top: 79px;
+  left: 783px;
+  background-color: white;
+  border-radius: 40px;
+  border: 1px solid;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cardContent {
+  padding: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.header {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0 45px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  align-items: flex-start;
+  gap: 1px;
+  position: relative;
+}
+
+.welcomeText {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  color: black;
+}
+
+.brandName {
+  font-weight: bold;
+  color: #4682a9;
+}
+
+.title {
+  position: relative;
+  align-self: stretch;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 55px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.headerRight {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.signupPrompt {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  color: #8d8d8d;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.signupLink {
+  height: auto;
+  padding: 0;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  color: #4682a9;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.signupLink:hover {
+  text-decoration: none;
+}
+
+.kakaoButton {
+  display: flex;
+  width: 451px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 30px;
+  position: relative;
+  background-color: #fee500;
+  border-radius: 12px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.kakaoButton:hover {
+  background-color: rgba(254, 229, 0, 0.9);
+}
+
+.kakaoIcon {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.kakaoText {
+  position: relative;
+  width: fit-content;
+  margin-top: -25px;
+  margin-bottom: -23px;
+}
+
+.inputSection {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.inputContainer {
+  position: relative;
+  width: 451px;
+  height: 92px;
+}
+
+.inputLabel {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.emailInput {
+  position: absolute;
+  width: 451px;
+  height: 57px;
+  top: 35px;
+  left: 0;
+  background-color: white;
+  border-radius: 9px;
+  border: 1px solid #4285f4;
+  padding-left: 24px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  font-size: 14px;
+}
+
+.emailInput::placeholder {
+  color: #7f7f7f;
+}
+
+.passwordInput {
+  position: absolute;
+  width: 451px;
+  height: 57px;
+  top: 35px;
+  left: 0;
+  background-color: white;
+  border-radius: 9px;
+  border: 1px solid #adadad;
+  padding-left: 24px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #7f7f7f;
+  font-size: 14px;
+}
+
+.passwordInput::placeholder {
+  color: #7f7f7f;
+}
+
+.loginButton {
+  margin-top: 5%;
+  position: relative;
+  width: 100%;
+  height: 54px;
+  background-color: #4682a9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 19px rgba(119, 147, 65, 0.3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.loginButton:hover {
+  background-color: rgba(70, 130, 169, 0.9);
+}
+
+.leftSideContent {
+  display: flex;
+  width: 714px;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.leftContentInner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.logoSection {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.logoContainer {
+  position: relative;
+  width: 107px;
+  height: 107px;
+  background-size: 100% 100%;
+}
+
+.logoInner {
+  position: relative;
+  height: 107px;
+  background-size: 100% 100%;
+}
+
+.logoImage {
+  position: absolute;
+  width: 107px;
+  height: 107px;
+  top: 0;
+  left: 0;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 203px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 70px;
+  position: relative;
+}
+
+.contentTitle {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.titleText {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 34px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.subtitleContainer {
+  display: flex;
+  width: 250px;
+  height: 36px;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin-right: -10px;
+}
+
+.subtitleText {
+  position: relative;
+  width: 396px;
+  margin-top: -1px;
+  margin-right: -146px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex: 0 0 auto;
+  margin-bottom: -59px;
+  margin-right: -70px;
+  overflow: hidden;
+}
+
+.descriptionText {
+  position: relative;
+  width: 311px;
+  height: 115px;
+  margin-top: -1px;
+  margin-left: -0.5px;
+  margin-right: -0.5px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.illustration {
+  position: relative;
+  width: 385px;
+  height: 385px;
+}
+
+.illustrationImage {
+  position: absolute;
+  width: 324px;
+  height: 385px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}

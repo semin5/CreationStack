@@ -1,0 +1,192 @@
+.contentBodyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* 썸네일과 본문 내용 간의 간격 */
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box; /* 패딩과 보더 포함 너비 계산 */
+}
+
+.thumbnailWrapper {
+  width: 100%;
+  max-height: 400px; /* 썸네일 이미지 최대 높이 제한 */
+  overflow: hidden; /* 넘치는 부분 숨김 */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* 이미지 로딩 중/없을 때 배경 */
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* 이미지 비율 유지하며 컨테이너에 맞춤 */
+  display: block; /* 이미지 하단 여백 제거 */
+}
+
+.contentWrapper {
+  line-height: 1.8; /* 가독성을 위한 줄 간격 */
+  font-size: 16px;
+  color: #333;
+  word-break: break-word; /* 긴 단어/URL이 컨테이너를 벗어나지 않도록 */
+}
+
+/* ReactMarkdown이 생성하는 HTML 요소들에 대한 기본 스타일 */
+/* 마크다운 콘텐츠 요소 간 간격 및 스타일 개선 */
+.contentWrapper h1,
+.contentWrapper h2,
+.contentWrapper h3,
+.contentWrapper h4,
+.contentWrapper h5,
+.contentWrapper h6 {
+  color: #23262a;
+  margin-top: 1.8em; /* 제목 위쪽 간격 증가 */
+  margin-bottom: 1em; /* 제목 아래쪽 간격 증가 */
+  font-weight: 700;
+}
+
+.contentWrapper h1 { font-size: 2.2em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+.contentWrapper h2 { font-size: 1.8em; border-bottom: 1px dashed #eee; padding-bottom: 0.2em; }
+.contentWrapper h3 { font-size: 1.5em; }
+.contentWrapper h4 { font-size: 1.2em; }
+.contentWrapper p {
+  margin-bottom: 1.2em; /* 단락 간 간격 증가 */
+}
+
+.contentWrapper a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contentWrapper a:hover {
+  text-decoration: underline;
+}
+
+.contentWrapper strong {
+  font-weight: bold;
+  color: #23262a;
+}
+
+.contentWrapper em {
+  font-style: italic;
+  color: #555;
+}
+
+.contentWrapper ul,
+.contentWrapper ol {
+  margin-left: 25px; /* 목록 들여쓰기 */
+  margin-bottom: 1.2em; /* 목록 아래 간격 증가 */
+  padding: 0;
+}
+
+.contentWrapper li {
+  margin-bottom: 0.6em; /* 목록 항목 간 간격 */
+}
+
+.contentWrapper pre {
+  background-color: #f6f8fa; /* 코드 블록 배경색 */
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto; /* 긴 코드 줄바꿈 없이 스크롤 */
+  margin-bottom: 1.5em; /* 코드 블록 아래 간격 증가 */
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contentWrapper code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: rgba(27,31,35,.05); /* 인라인 코드 배경색 */
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.contentWrapper pre code {
+  background-color: transparent; /* 코드 블록 내 코드는 배경색 없음 */
+  padding: 0;
+}
+
+/* 인용문 (blockquote) 스타일 개선 */
+.contentWrapper blockquote {
+  border-left: 5px solid #a7d9f7; /* 더 두껍고 눈에 띄는 왼쪽 테두리 */
+  background-color: #f0f8ff; /* 연한 배경색 */
+  color: #4a5568; /* 텍스트 색상 */
+  padding: 15px 20px; /* 패딩 증가 */
+  margin: 1.5em 0; /* 위아래 간격 증가 */
+  border-radius: 8px; /* 둥근 모서리 */
+  font-style: italic; /* 이탤릭체 */
+}
+
+/* 이미지 오버플로우 및 스타일 통일 */
+.contentWrapper img {
+  max-width: 100%; /* 컨테이너 너비를 넘지 않도록 */
+  height: auto; /* 비율 유지 */
+  object-fit: contain; /* 썸네일과 동일하게 비율 유지하며 컨테이너에 맞춤 */
+  display: block; /* 블록 요소로 설정하여 독립적인 줄에 위치 */
+  margin: 1.5em auto; /* 위아래 간격 및 중앙 정렬 */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contentWrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em; /* 테이블 아래 간격 증가 */
+}
+
+.contentWrapper th,
+.contentWrapper td {
+  border: 1px solid #dfe2e5;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.contentWrapper th {
+  background-color: #f6f8fa;
+  font-weight: 600;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .contentBodyContainer {
+    padding: 15px;
+    gap: 16px;
+  }
+
+  .contentWrapper {
+    font-size: 15px;
+  }
+
+  .contentWrapper h1 { font-size: 1.8em; }
+  .contentWrapper h2 { font-size: 1.6em; }
+  .contentWrapper h3 { font-size: 1.3em; }
+  .contentWrapper h4 { font-size: 1.1em; }
+
+  .contentWrapper blockquote {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentBodyContainer {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .contentWrapper {
+    font-size: 14px;
+  }
+
+  .contentWrapper h1 { font-size: 1.6em; }
+  .contentWrapper h2 { font-size: 1.4em; }
+  .contentWrapper h3 { font-size: 1.2em; }
+  .contentWrapper h4 { font-size: 1em; }
+
+  .contentWrapper blockquote {
+    padding: 10px 12px;
+  }
+}

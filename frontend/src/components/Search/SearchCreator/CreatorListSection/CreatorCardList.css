@@ -1,0 +1,125 @@
+.creator-card-list {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  gap: 32px;
+  width: 100%;
+}
+
+.creator-card-list .creator-card-item {
+  background-color: var(--gray-50);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc((100% - (32px * 2)) / 3); /* 3열을 위한 너비 계산 (gap 32px 고려) */
+  flex-basis: calc((100% - (32px * 2)) / 3); /* 3열을 위한 flex-basis 계산 */
+  max-width: 300px; /* 각 카드의 최대 너비 설정 (선택 사항, 디자인에 따라 조절) */
+  cursor: pointer;
+}
+
+/* Add the rest of your styles for creator card items here */
+
+.creator-card-list .container-section {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.creator-card-list .profile-image {
+  background-color: var(--avatar-user-squarecandice-wu-color-background);
+  background-image: url(https://c.animaapp.com/md4j54dghsKtuh/img/profileimagesection.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 40px;
+  height: 80px;
+  position: relative;
+  width: 80px;
+}
+
+.creator-card-list .text-section {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.creator-card-list .text-section-2 {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.creator-card-list .name-and-job-text {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.creator-card-list .name-text {
+  align-self: stretch;
+  color: #212121;
+  font-family: 'Poppins', Helvetica;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+}
+
+.creator-card-list .job-text {
+  align-self: stretch;
+  color: #212121;
+  font-family: 'Poppins', Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.creator-card-list .member-count-text {
+  color: #757575;
+  font-family: 'Poppins', Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.creator-card-list .supporting-text {
+  align-self: stretch;
+  color: #212121;
+  font-family: 'Poppins', Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}

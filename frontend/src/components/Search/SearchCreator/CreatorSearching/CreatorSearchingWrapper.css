@@ -1,0 +1,119 @@
+.creator-searching-wrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.creator-searching-wrapper .content {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  width: 100%;
+}
+
+.creator-searching-wrapper .heading-and {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+}
+
+.creator-searching-wrapper .heading-wrapper {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.creator-searching-wrapper .heading {
+  align-self: stretch;
+  color: #212121;
+  font-family: "Poppins", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  line-height: 40px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+}
+
+.creator-searching-wrapper .our-philosophy-is {
+  align-self: stretch;
+  color: #212121;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: relative;
+  text-align: center;
+}
+
+.creator-searching-wrapper .search-bar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 375.41px;
+}
+
+.creator-searching-wrapper .search-bar-2 {
+  align-items: center;
+  border: 1.31px solid;
+  border-color: #d0d5dd;
+  border-radius: 5.25px;
+  display: flex;
+  gap: 9px;
+  padding: 9px;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+}
+
+.creator-searching-wrapper .img {
+  height: 20.98px;
+  position: relative;
+  width: 20.98px;
+}
+
+.creator-searching-wrapper .text-wrapper-4 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: #757575;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Poppins", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 23.61px;
+  letter-spacing: 0;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+
+.creator-searching-wrapper .actions {
+  height: 48px;
+  position: relative;
+  width: 78px;
+}

@@ -1,0 +1,9 @@
+.banner-section-instance {
+  align-self: stretch !important;
+  background: url(https://c.animaapp.com/mdb1e2iiN7sVSZ/img/bannersection.png) 50% 50% / cover !important;
+  background-position: unset !important;
+  background-size: unset !important;
+  width: 100% !important;
+  color-scheme: light; /* 브라우저에 밝은 테마임을 알림 */
+  filter: invert(0); /* 이미지 반전 방지 시도 */
+}

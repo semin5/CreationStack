@@ -1,0 +1,267 @@
+/* LocalCommon.module.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 1100px;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 5rem 0;
+  position: relative;
+  background-color: white;
+}
+
+.card {
+  width: 539px;
+  height: 900px;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  border: 1px solid white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 4px 35px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.cardContent {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.welcomeText {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 21px;
+  line-height: 31.5px;
+  color: black;
+}
+
+.brandName {
+  font-weight: bold;
+  color: #4682a9;
+}
+
+.title {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: black;
+}
+
+.headerRight {
+  text-align: right;
+}
+
+.loginPrompt {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 13px;
+  color: #8d8d8d;
+  line-height: 19.5px;
+}
+
+.loginLink {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 13px;
+  color: #4682a9;
+  line-height: 19.5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.loginLink:hover {
+  text-decoration: none;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fieldLabel {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: black;
+}
+
+.required {
+  color: #ff0000;
+}
+
+.inputWithButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputWrapper {
+  flex: 1;
+  height: 58px;
+  border-radius: 9px;
+  border: 1px solid #749bc2;
+  overflow: hidden;
+}
+
+.inputWrapperRegular {
+  position: relative; /* --- 추가된 부분: 아이콘 위치 기준점 --- */
+  height: 58px;
+  border-radius: 9px;
+  border: 1px solid #adadad;
+  overflow: hidden;
+  display: flex; /* 아이콘과 input 정렬을 위해 추가 */
+  align-items: center; /* 아이콘과 input 정렬을 위해 추가 */
+}
+
+.input {
+  height: 100%;
+  border: none;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-size: 0.875rem;
+  width: 100%;
+  padding: 0 1rem;
+  background: transparent;
+  color: black;
+}
+
+/* 비밀번호 아이콘이 있을 때 input의 오른쪽 패딩을 추가하여 아이콘과 텍스트가 겹치지 않도록 함 */
+.inputWrapperRegular .input {
+  padding-right: 2.5rem; /* 40px */
+}
+
+.input::placeholder {
+  color: #999999;
+  font-size: 0.875rem;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.duplicateCheckButton {
+  width: 176px;
+  height: 58px;
+  background-color: #4682a9;
+  opacity: 0.5;
+  border-radius: 9px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.duplicateCheckButton:hover {
+  opacity: 0.7;
+}
+
+/* --- 추가된 부분: 비밀번호 보이기/숨기기 아이콘 버튼 스타일 --- */
+.passwordIcon {
+  position: absolute;
+  top: 50%;
+  right: 1rem; /* 16px */
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8d8d8d;
+}
+
+.submitSection {
+  padding-top: 30px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButton {
+  width: 100px;
+  height: 55px;
+  background-color: white;
+  border-radius: 10px;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: #f9fafb;
+  color: #4b5563;
+  border-color: #9ca3af;
+}
+
+.submitButton {
+  flex: 1;
+  height: 55px;
+  background-color: #4682a9;
+  border-radius: 10px;
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: rgba(70, 130, 169, 0.9);
+}
+
+.submitButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.labelWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.statusMessage {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.available {
+  color: #10b981;
+}
+.unavailable {
+  color: #ef4444;
+}

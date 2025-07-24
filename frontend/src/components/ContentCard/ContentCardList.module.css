@@ -1,0 +1,12 @@
+/* ContentCardList 컨테이너 스타일 */
+.grid { /* 고객님의 .grid 클래스에 맞춰 수정 */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* 기존 유지 */
+  gap: 24px; /* 기존 유지 */
+  width: 100%; /* 부모 너비를 꽉 채우도록 변경 */
+  max-width: none; /* 기존 max-width를 제거하거나 none으로 설정 */
+  margin: 0 auto; /* 중앙 정렬 유지 */
+  padding: 20px 0; /* 위아래 여백 유지 */
+}
+
+

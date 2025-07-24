@@ -1,5 +1,7 @@
 package com.creationstack.backend.exception;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.AccessDeniedException;
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.HttpServerErrorException;
 
 /*spring security, cors 등 예외 처리 추후 설정*/
 @RestControllerAdvice
@@ -57,13 +61,52 @@ public class GlobalExceptionHandler {
   @ExceptionHandler(CustomException.class)
   public ResponseEntity<ErrorResponse> handleCustomException(CustomException ex) {
     ErrorResponse error = new ErrorResponse(LocalDateTime.now(),ex.getStatus().value(),ex.getStatus().getReasonPhrase(),ex.getMessage());
-    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    return ResponseEntity.status(ex.getStatus()).body(error);
+  }
+
+
+  // RestTemplate이 4xx 오류를 응답받을 때 사용됨
+  @ExceptionHandler(HttpClientErrorException.class)
+  public ResponseEntity<ErrorResponse> handleHttpClientError(HttpClientErrorException ex) {
+    ErrorResponse error = new ErrorResponse(
+        LocalDateTime.now(),
+        ex.getStatusCode().value(),
+        ex.getStatusText(),
+        extractPortOneErrorMessage(ex.getResponseBodyAsString())
+    );
+    return ResponseEntity.status(ex.getStatusCode()).body(error);
+  }
+
+  // RestTemplate이 5xx 서버 오류 응답받을 때
+  @ExceptionHandler(HttpServerErrorException.class)
+  public ResponseEntity<ErrorResponse> handleHttpServerError(HttpServerErrorException ex) {
+    ErrorResponse error = new ErrorResponse(
+        LocalDateTime.now(),
+        ex.getStatusCode().value(),
+        ex.getStatusText(),
+        "외부 결제 시스템 오류: " + extractPortOneErrorMessage(ex.getResponseBodyAsString())
+    );
+    return ResponseEntity.status(ex.getStatusCode()).body(error);
   }
 
   // 그외 모든 예외 처리
   @ExceptionHandler(Exception.class)
   public ResponseEntity<ErrorResponse> handleException(Exception ex) {
     ErrorResponse error = new ErrorResponse(LocalDateTime.now(),HttpStatus.INTERNAL_SERVER_ERROR.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),"서버 오류가 발생했습니다.");
-    return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
+  }
+
+  // 포트원 응답 body에서 메세지 파싱
+  private String extractPortOneErrorMessage(String responseBody) {
+    try {
+      JsonNode node = new ObjectMapper().readTree(responseBody);
+      if (node.has("message")) {
+        JsonNode messageNode = node.get("message");
+        return messageNode.isTextual() ? messageNode.asText() : messageNode.toString();
+      }
+      return "에러 메시지를 찾을 수 없습니다.";
+    } catch (Exception e) {
+      return "에러 응답 파싱 실패";
+    }
   }
 }

@@ -1,0 +1,130 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  animation: fadeIn 0.3s ease-out;
+  overflow-x: unset;
+}
+
+.warning_popup {
+  width: 548px;
+  height: 252px;
+  background-color: #fff;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 24px 32px;
+  box-sizing: border-box;
+  font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.titleText {
+  font-size: 24px;
+  font-weight: 700;
+  color: #23262a;
+}
+
+.cancelButton {
+  font-size: 24px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #23262a;
+}
+
+.subText {
+  font-size: 16px;
+  font-weight: 400;
+  color: #23262a;
+  margin-bottom: 32px;
+}
+
+.bottomButton {
+  position: absolute;
+  bottom: 24px;
+  right: 32px;
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  background-color: #4682a9;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3a6d8c;
+}
+
+.cancel {
+  background-color: #d3d3d3;
+  color: #333;
+}
+
+.cancel:hover {
+  background-color: #bbb;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+.separator {
+  margin-top: 10px;
+  background-color: #e0e0e0; /* 연한 회색 선 */
+  height: 1px;
+}

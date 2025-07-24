@@ -1,0 +1,125 @@
+.contentHeaderContainer {
+  display: flex;
+  flex-direction: column; /* 제목과 메타데이터 섹션을 수직으로 정렬 */
+  gap: 16px; /* 제목과 메타데이터 섹션 간의 간격 */
+  padding-bottom: 24px; /* 하단 구분선과의 간격 */
+  border-bottom: 1px solid #e0e0e0; /* 하단 구분선 */
+}
+
+.contentTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #23262a;
+  margin: 0; /* 기본 마진 제거 */
+}
+
+.metaInfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* 요소들이 많아지면 줄바꿈 */
+  gap: 16px; /* 메타 정보 요소들 간의 간격 */
+}
+
+.subscriberBadge {
+  background-color: #f0f2fe; /* 연한 파란색 배경 */
+  color: #6941c6; /* 보라색 텍스트 */
+  padding: 4px 10px;
+  border-radius: 20px; /* 둥근 모서리 */
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* 카테고리 태그 간 간격 */
+}
+
+.categoryTag {
+  background-color: #e0f2fe; /* light blue background */
+  border: 1px solid #93c5fd; /* blue-300 border */
+  border-radius: 9999px; /* pill shape */
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2563eb; /* blue-700 text */
+  white-space: nowrap;
+}
+
+.createdAt {
+  font-size: 14px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* 오른쪽으로 정렬 */
+}
+
+.editButton,
+.deleteButton {
+  background-color: #4682a9; /* 저장 버튼과 유사한 색상 */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+  background-color: #3a6b8d;
+}
+
+.deleteButton {
+  background-color: #dc3545; /* 빨간색 삭제 버튼 */
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .contentTitle {
+    font-size: 28px;
+  }
+
+  .metaInfo {
+    flex-direction: column; /* 작은 화면에서 수직 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 10px;
+  }
+
+  .actionButtons {
+    margin-left: 0; /* 왼쪽 정렬 */
+    width: 100%; /* 버튼이 전체 너비 차지 */
+    justify-content: flex-start; /* 버튼들 왼쪽 정렬 */
+  }
+
+  .editButton,
+  .deleteButton {
+    flex-grow: 1; /* 버튼들이 남은 공간을 채우도록 */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentTitle {
+    font-size: 24px;
+  }
+
+  .subscriberBadge,
+  .categoryTag,
+  .createdAt,
+  .editButton,
+  .deleteButton {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

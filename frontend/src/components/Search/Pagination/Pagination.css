@@ -1,0 +1,150 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the pagination elements */
+  height: 38px;
+  width: 100%; /* Allow it to take full width or adjust as needed */
+  gap: 16px; /* Add some gap between elements */
+}
+
+.pagination .prev {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: 52px;
+}
+
+.pagination .text-wrapper-5 {
+  color: #23262a;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 19px; /* Adjust as needed */
+}
+
+.pagination .chevron-left {
+  height: 16px;
+  width: 16px;
+}
+
+.pagination .vector {
+  height: 14px;
+  width: 8px;
+  display: inline-block;
+}
+
+.pagination .nums {
+  display: inline-flex;
+  align-items: center; /* Align numbers vertically */
+  gap: 8px;
+}
+
+.pagination .element {
+  background-color: #f1f9ff;
+  border: 1px solid;
+  border-color: #0c8ce9;
+  border-radius: 5px;
+  height: 38px;
+  overflow: hidden;
+  position: relative;
+  width: 38px;
+}
+
+.pagination .num {
+  color: #0c8ce9;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  height: 10px;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  white-space: nowrap;
+}
+
+.pagination .num-wrapper {
+  background-color: #f0f1f5;
+  border-radius: 5px;
+  height: 38px;
+  overflow: hidden;
+  position: relative;
+  width: 38px;
+}
+
+.pagination .num-2 {
+  color: #60656e;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 10px;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  white-space: nowrap;
+}
+
+.pagination .num-3 {
+  color: #60656e;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 10px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  white-space: nowrap;
+}
+
+.pagination .num-4 {
+  color: #60656e;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 10px;
+  left: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  white-space: nowrap;
+}
+
+.pagination .next {
+  height: 16px;
+  width: 52px;
+  display: flex; /* Ensure flex properties apply to next button content */
+  align-items: center;
+}
+
+.pagination .prev-2 {
+  color: #23262a;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  font-weight: 500;
+  height: 10px;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: 19px; /* Adjust as needed */
+}
+
+.pagination .vector-wrapper {
+  height: 16px;
+  width: 16px;
+}

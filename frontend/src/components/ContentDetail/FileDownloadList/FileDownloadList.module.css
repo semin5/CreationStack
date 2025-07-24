@@ -1,0 +1,79 @@
+.fileDownloadListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 파일 항목 간 간격 */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #f0f0f0; /* 점선 구분선 */
+}
+
+.fileItem:last-child {
+  border-bottom: none; /* 마지막 항목에는 구분선 없음 */
+}
+
+.fileName {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none; /* 기본 링크 밑줄 제거 */
+  flex-grow: 1;
+  margin-right: 15px;
+  word-break: break-all; /* 긴 파일명 줄바꿈 */
+}
+
+.fileName:hover {
+  color: #007bff; /* 호버 시 색상 변경 */
+  text-decoration: underline;
+}
+
+.downloadButton {
+  background-color: #4682a9; /* 다운로드 버튼 색상 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  white-space: nowrap; /* 버튼 텍스트 줄바꿈 방지 */
+}
+
+.downloadButton:hover {
+  background-color: #3a6b8d;
+}
+
+/* 파일이 없을 때 메시지 */
+.noFilesMessage {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .fileItem {
+    flex-direction: column; /* 작은 화면에서 수직 정렬 */
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .fileName {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .downloadButton {
+    width: 100%; /* 버튼 전체 너비 */
+    text-align: center;
+  }
+}

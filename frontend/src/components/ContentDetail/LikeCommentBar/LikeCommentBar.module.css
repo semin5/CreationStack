@@ -1,0 +1,42 @@
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 24px;
+  padding: 16px 0;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.actionButton:hover {
+  color: #ef4444;
+}
+
+.commentInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.liked {
+  color: #ef4444 !important;
+}

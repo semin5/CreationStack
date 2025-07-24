@@ -1,0 +1,441 @@
+/* layout.module.css */
+/* Layout container */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* 디버깅용 배경색 추가 */
+  background-color: #f0f8ff; /* AliceBlue */
+}
+
+/* Navbar (General container for the entire layout, might be redundant with .navbarCreator) */
+.nav_container {
+  height: var(--navbar-height, 60px); /* 기본값 60px */
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0 var(--padding-horizontal, 20px); /* 기본값 20px */
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+  max-width: var(--max-width, 1200px); /* 기본값 1200px */
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem var(--padding-horizontal, 20px); /* 기본값 20px */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  /* 디버깅용 테두리 추가 */
+  /* border: 2px dashed red; */ /* Main 영역이 어디인지 명확히 표시 */
+  min-height: 200px; /* 최소 높이를 강제로 부여하여 내용이 없어도 공간을 차지하게 함 */
+}
+
+/* Footer (from previous context, kept for completeness) */
+.footer {
+  height: var(--footer-height); /* Assuming --footer-height is defined elsewhere or will be given */
+  background-color: #f1f1f1;
+  color: #666;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-horizontal, 20px); /* Default padding */
+  box-sizing: border-box;
+  border-top: 1px solid #ddd;
+}
+
+/* NavbarCreator specific styles (Updated and merged) */
+.navbarCreator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px; /* Updated padding */
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb; /* Updated border color */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Updated box-shadow */
+  position: sticky; /* Retained */
+  top: 0; /* Retained */
+  z-index: 100; /* Updated z-index */
+  width: 100%; /* Retained */
+  box-sizing: border-box; /* Retained */
+}
+
+/* 로고 섹션 */
+.logoSection {
+  flex-shrink: 0; /* New */
+  display: flex;
+  align-items: center; 
+}
+
+.logoImg {
+  height: 60px; /* Retained */
+  width: auto; /* New */
+  cursor: pointer; /* New */
+  object-fit: contain; /* Retained (was in previous version of this class) */
+}
+
+/* 링크 메뉴바 */
+.linkSection {
+  display: flex; /* Retained */
+  align-items: center; /* New */
+  gap: 32px; /* Updated gap */
+  margin-left: 48px; /* New */
+}
+
+.menuItem {
+  background: none; /* Retained */
+  border: none; /* Retained */
+  font-family: 'Poppins', Helvetica; /* Retained */
+  font-size: 16px; /* Retained */
+  font-weight: 500; /* Retained */
+  color: #6b7280; /* Updated color */
+  cursor: pointer; /* Retained */
+  padding: 8px 16px; /* Updated padding */
+  border-radius: 8px; /* Updated border-radius */
+  transition: all 0.2s ease; /* Updated transition */
+  position: relative; /* New */
+}
+
+.menuItem:hover {
+  color: #374151; /* Updated hover color */
+  background-color: #f3f4f6; /* Retained */
+}
+
+.menuItem.active {
+  color: #2563eb; /* Updated active color */
+  background-color: #dbeafe; /* New */
+}
+
+.menuItem.active::after {
+  /* New active indicator */
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #2563eb;
+}
+
+/* 검색창 */
+.searchSection {
+  flex: 1; /* Updated from flex-grow: 1 */
+  max-width: 400px; /* Retained */
+  margin: 0 32px; /* Updated margin */
+  display: flex; /* Retained */
+  justify-content: center; /* Retained */
+}
+
+.searchBar {
+  display: flex; /* Retained */
+  align-items: center; /* Retained */
+  background-color: #f9fafb; /* Updated background-color */
+  border: 1px solid #d1d5db; /* Updated border */
+  border-radius: 24px; /* Updated border-radius */
+  padding: 8px 16px; /* Updated padding */
+  transition: all 0.2s ease; /* New */
+  position: relative; /* New */
+}
+
+.searchBar:focus-within {
+  /* New focus style */
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.searchIcon {
+  width: 20px; /* Retained */
+  height: 20px; /* Retained */
+  margin-right: 12px; /* Updated margin */
+  opacity: 0.5; /* New */
+  color: #888; /* Retained (was in previous version of this class) */
+}
+
+.searchInput {
+  flex: 1; /* Updated from flex-grow: 1 */
+  border: none; /* Retained */
+  background: none; /* Retained */
+  outline: none; /* Retained */
+  font-size: 14px; /* Retained */
+  color: #374151; /* Updated color */
+  font-family: 'Poppins', Helvetica; /* Retained (was in previous version of this class) */
+}
+
+.searchInput::placeholder {
+  color: #9ca3af; /* Updated placeholder color */
+}
+
+.clearButton {
+  background: none; /* Retained */
+  border: none; /* Retained */
+  font-size: 18px; /* Updated font-size */
+  color: #9ca3af; /* Updated color */
+  cursor: pointer; /* Retained */
+  padding: 0; /* Retained */
+  margin-left: 8px; /* New */
+  width: 20px; /* New */
+  height: 20px; /* New */
+  display: flex; /* New */
+  align-items: center; /* New */
+  justify-content: center; /* New */
+  border-radius: 50%; /* New */
+  transition: all 0.2s ease; /* New */
+}
+
+.clearButton:hover {
+  color: #6b7280; /* New */
+  background-color: #e5e7eb; /* New */
+}
+
+/* 우측 버튼들 */
+.rightSection {
+  display: flex; /* Retained */
+  align-items: center; /* Retained */
+  gap: 16px; /* Updated gap */
+  flex-shrink: 0; /* New */
+  position: relative; /* Retained (for profile dropdown) */
+}
+
+.createContentButton {
+  background-color: #2563eb; /* Updated background-color */
+  color: white; /* Retained */
+  border: none; /* Retained */
+  border-radius: 8px; /* Updated border-radius */
+  padding: 10px 20px; /* Updated padding */
+  font-size: 14px; /* Retained */
+  font-weight: 500; /* New */
+  cursor: pointer; /* Retained */
+  transition: all 0.2s ease; /* Updated transition */
+}
+
+.createContentButton:hover {
+  background-color: #1d4ed8; /* Updated hover color */
+  transform: translateY(-1px); /* New */
+}
+
+.createContentButton:active {
+  /* New active state */
+  transform: translateY(0);
+}
+
+.profileButtonContainer {
+  /* Retained */
+  position: relative; /* 드롭다운 메뉴의 위치 기준 */
+}
+
+.profileButton {
+  background: none; /* Retained */
+  border: none; /* Retained */
+  padding: 0; /* Retained */
+  cursor: pointer; /* Retained */
+  border-radius: 50%; /* New */
+  transition: all 0.2s ease; /* New */
+}
+
+.profileButton:hover {
+  /* New hover state */
+  transform: scale(1.05);
+}
+
+.profileButton .profileImage {
+  /* Retained */
+  width: 40px; /* Retained */
+  height: 40px; /* Retained */
+  border-radius: 50%; /* Retained */
+  object-fit: cover; /* Retained */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .navbarCreator {
+    padding: 8px 16px;
+  }
+
+  .linkSection {
+    gap: 16px;
+    margin-left: 16px;
+  }
+
+  .menuItem {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .searchSection {
+    max-width: 250px;
+    margin: 0 16px;
+  }
+
+  .createContentButton {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .linkSection {
+    display: none;
+  }
+
+  .searchSection {
+    max-width: 200px;
+    margin: 0 8px;
+  }
+
+  .createContentButton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Layout container */
+.layout {
+  /* 프로필 드롭다운 메뉴 스타일 (Retained from previous turn) */
+  .profileDropdownMenu {
+    position: absolute;
+    top: 100%; /* 프로필 버튼 바로 아래에 위치 */
+    right: 0; /* 버튼의 오른쪽에 정렬 */
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 150px;
+    z-index: 1001; /* Navbar보다 위에 표시 */
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    margin-top: 5px; /* 버튼과의 간격 */
+  }
+
+  .profileDropdownMenuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #333; /* 기본 텍스트 색상 */
+    font-family: 'Poppins', Helvetica; /* Retained */
+    font-size: 15px; /* Retained */
+    font-weight: 500; /* Retained */
+    white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 */
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .profileDropdownMenuItem:hover {
+    background-color: #f0f0f0; /* 호버 시 배경색 변경 */
+  }
+
+  /* Responsive design (Updated and merged) */
+  @media (max-width: 1024px) {
+    /* Changed from 768px in new code to 1024px for consistency with main layout */
+    .main {
+      padding: 1.5rem 1rem;
+    }
+
+    .nav_container {
+      padding: 0 1rem;
+    }
+
+    .footer {
+      padding: 0 1rem;
+    }
+
+    .navbarCreator {
+      padding: 8px 16px; /* Adjusted from 768px in new code */
+    }
+
+    .linkSection {
+      gap: 16px; /* Adjusted from 768px in new code */
+      margin-left: 16px; /* Adjusted from 768px in new code */
+    }
+
+    .menuItem {
+      font-size: 14px; /* Adjusted from 768px in new code */
+      padding: 6px 12px; /* Adjusted from 768px in new code */
+    }
+
+    .searchSection {
+      max-width: 250px; /* Adjusted from 768px in new code */
+      margin: 0 16px; /* Adjusted from 768px in new code */
+    }
+
+    .createContentButton {
+      padding: 8px 16px; /* Adjusted from 768px in new code */
+      font-size: 13px; /* Adjusted from 768px in new code */
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* New breakpoint added for 640px styles */
+    .linkSection {
+      display: none; /* Hidden on smaller screens */
+    }
+
+    .searchSection {
+      max-width: 200px; /* Adjusted from 640px in new code */
+      margin: 0 8px; /* Adjusted from 640px in new code */
+    }
+
+    .createContentButton {
+      padding: 6px 12px; /* Adjusted from 640px in new code */
+      font-size: 12px; /* Adjusted from 640px in new code */
+    }
+  }
+
+  @media (max-width: 600px) {
+    /* Retained from previous layout.module.css */
+    .main {
+      padding: 1rem 0.5rem;
+    }
+
+    .nav_container,
+    .footer {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+/* 로그인, 회원가입 버튼 공통 기본 스타일 */
+.authButton,
+.authButtonFilled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* 로그인 버튼 */
+.authButton {
+  color: #4682a9;
+  background-color: white;
+  border-color: #4682a9;
+}
+
+.authButton:hover {
+  background-color: #f0f8ff;
+  color: #3b7194;
+  border-color: #3b7194;
+}
+
+/* 회원가입 버튼 */
+.authButtonFilled {
+  color: white;
+  background-color: #4682a9;
+}
+
+.authButtonFilled:hover {
+  background-color: #3b7194;
+}

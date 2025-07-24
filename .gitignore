@@ -1,6 +1,14 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,java,macos,windows,maven,react,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,java,macos,windows,maven,react,node
 
+# Eclipse files
+.project
+.classpath
+.settings/
+bin/
+target/
+
+
 ### Java ###
 # Compiled class file
 *.class
@@ -288,3 +296,7 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.sw?
+**/.metadata/
+**/.factorypath
+
+src/main/resources/application-secret.yml

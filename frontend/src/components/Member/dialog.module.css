@@ -1,0 +1,125 @@
+/* DialogOverlay 스타일 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* DialogContent 스타일 */
+.content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  display: grid;
+  width: 100%;
+  max-width: 32rem; /* max-w-lg */
+  transform: translate(-50%, -50%);
+  gap: 1rem; /* gap-4 */
+  border: 1px solid hsl(240 5.9% 90%); /* border */
+  background-color: white; /* bg-background */
+  padding: 1.5rem; /* p-6 */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
+  border-radius: 0.5rem; /* sm:rounded-lg */
+}
+
+/* DialogClose 버튼 스타일 */
+.closeButton {
+  position: absolute;
+  right: 1rem; /* right-4 */
+  top: 1rem; /* top-4 */
+  border-radius: 0.25rem; /* rounded-sm */
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.closeButton:hover {
+  opacity: 1;
+}
+
+/* DialogHeader 스타일 */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem; /* space-y-1.5 */
+  text-align: left;
+}
+
+/* DialogFooter 스타일 */
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem; /* sm:space-x-2 */
+}
+@media (min-width: 640px) {
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+/* DialogTitle 스타일 */
+.title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  line-height: 1;
+  letter-spacing: -0.025em; /* tracking-tight */
+}
+
+/* DialogDescription 스타일 */
+.description {
+  font-size: 0.875rem; /* text-sm */
+  color: hsl(240 5.2% 63.9%); /* text-muted-foreground */
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+}
+
+/* 애니메이션 적용 */
+.overlay[data-state='open'] {
+  animation: fadeIn 0.2s ease-out;
+}
+.overlay[data-state='closed'] {
+  animation: fadeOut 0.2s ease-in;
+}
+.content[data-state='open'] {
+  animation: zoomIn 0.2s ease-out;
+}
+.content[data-state='closed'] {
+  animation: zoomOut 0.2s ease-in;
+}

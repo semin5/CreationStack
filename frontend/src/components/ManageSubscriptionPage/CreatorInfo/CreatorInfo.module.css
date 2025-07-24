@@ -1,0 +1,85 @@
+.creatorInfo {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  padding: 35px 65px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+  .creatorInfo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    min-width: 700px;
+    padding: 35px 65px;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.profile-image-wrapper {
+  width: 153px;
+  height: 153px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ecf8f6;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.group {
+  flex: 1;
+}
+
+.creator-name {
+  font-size: 29px;
+  font-weight: bold;
+  color: #292929;
+  margin-bottom: 10px;
+}
+
+.subscriber-count {
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+  margin-bottom: 5px;
+}
+
+.p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.status-message {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9b9b9b;
+}
+
+.button-area {
+  flex-shrink: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.nicknameWrapper {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.nickname {
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: #292929;
+}
+
+.bio {
+  font-size: 20px;
+  font-weight: 300;
+  color: #64748b;
+  max-width: 50%;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  overflow: hidden; /* 넘치는 글자 숨기기 */
+  word-wrap: break-word; /* 단어가 너무 길면 줄바꿈 */
+  white-space: normal; /* 줄바꿈 허용 */
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin-top: 50px;
+}
+
+.creatorBadge {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(6px, -50%);
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.subscriberCount {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.job {
+  font-size: 15px;
+  color: #6941c6;
+  margin-top: 4px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.noticeButton,
+.subscribeButton {
+  width: 8rem;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.noticeButton:focus,
+.subscribeButton:focus {
+  outline: none;
+}
+
+.noticeButton {
+  background-color: #b2d9de;
+}
+
+.noticeButton:hover {
+  background-color: #7bbfc4;
+}
+
+.subscribeButton {
+  background-color: #4682a9;
+}
+
+.subscribeButton:hover {
+  background-color: #35678b;
+}

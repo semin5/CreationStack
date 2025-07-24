@@ -1,0 +1,195 @@
+.myCreatorPage {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.myCreatorPage .teamSectionWrapper {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.myCreatorPage .teamSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  left: 29px;
+  position: relative;
+  top: 6px;
+  width: 100%;
+}
+
+.myCreatorPage .navbarCreatorInstance {
+  align-self: stretch !important;
+  width: 100% !important;
+}
+
+.myCreatorPage .mypageSection {
+  align-items: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  width: 1105px;
+}
+
+.myCreatorPage .dashboardSection {
+  align-items: center;
+  align-self: stretch;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between; /* 양 끝으로 요소 정렬 */
+  height: 216px;
+  padding: 28px 48px;
+  position: relative;
+  width: 100%;
+}
+
+.myCreatorPage .profileImage {
+  height: 153px;
+  object-fit: cover;
+  position: relative;
+  width: 153px;
+  border-radius: 50%; /* 프로필 이미지를 원형으로 만듭니다. */
+}
+
+/* 프로필 이미지와 사용자 정보를 묶는 새로운 그룹 */
+.myCreatorPage .profileInfoGroup {
+  display: flex;
+  align-items: center; /* 이미지와 텍스트를 수직 중앙 정렬 */
+  gap: 50px; /* 이미지와 사용자 정보 사이의 간격 */
+}
+
+
+.myCreatorPage .userInformation {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  width: 565px;
+}
+
+/* 공통 텍스트 스타일을 위한 기본 클래스 */
+.myCreatorPage .baseTextStyles {
+  font-family: "Poppins", Helvetica;
+  font-size: var(--text-md-normal-font-size);
+  font-style: var(--text-md-normal-font-style);
+  font-weight: var(--text-md-normal-font-weight);
+  letter-spacing: var(--text-md-normal-letter-spacing);
+  line-height: var(--text-md-normal-line-height);
+}
+
+.myCreatorPage .nicknameText {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  align-self: stretch;
+  color: var(--neutral-800);
+  display: -webkit-box;
+  font-size: 20px; /* 닉네임은 다르게 */
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+.myCreatorPage .jobText {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* 0에서 1로 변경하여 한 줄로 제한 */
+  align-self: stretch;
+  color: #6941c6; /* 직업 글자색 변경 */
+  display: -webkit-box;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.myCreatorPage .emailText {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  align-self: stretch;
+  color: var(--neutral-500);
+  display: -webkit-box;
+  overflow: hidden;
+  position: relative;
+  text-decoration: underline;
+  text-overflow: ellipsis;
+}
+
+.myCreatorPage .bioText {
+  -webkit-box-orient: vertical;
+  align-self: stretch;
+  color: var(--neutral-500);
+  display: -webkit-box;
+}
+
+.myCreatorPage .profileEditButton {
+  align-items: center;
+  border: 1.22px solid;
+  border-color: #4682a9;
+  border-radius: 9999px; /* 원형에 가깝게 변경 */
+  display: flex;
+  gap: 9.74px;
+  justify-content: center;
+  padding: 12px 24px; /* 이미지에 맞춰 패딩 조정 */
+  position: relative;
+  white-space: nowrap; /* 텍스트가 한 줄로 유지되도록 */
+}
+
+.myCreatorPage .div { /* This class name 'div' remains as is, as it's not a kebab-case. */
+  color: #4682a9;
+  margin-top: -1.10px;
+  position: relative;
+  width: fit-content;
+}
+
+.myCreatorPage .menuListSection {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  width: 100%;
+}
+
+.myCreatorPage .creatorMenuItem,
+.myCreatorPage .labelWrapper {
+  align-items: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  height: 67px;
+  padding: 10px 12px;
+  position: relative;
+  width: 100%;
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 부모로부터 글자색 상속 (또는 원하는 색상으로 지정) */
+  cursor: pointer; /* 클릭 가능한 요소임을 나타내는 커서 */
+  transition: background-color 0.2s ease-in-out; /* 호버 효과 추가 */
+}
+
+.myCreatorPage .creatorMenuItem:hover,
+.myCreatorPage .labelWrapper:hover {
+  background-color: #f0f0f0; /* 호버 시 배경색 변경 */
+}
+
+
+.myCreatorPage .label2 { /* This class name 'label-2' becomes 'label2' */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--neutral-800); /* 기본 텍스트 색상 유지 */
+  display: -webkit-box;
+  flex: 1;
+  height: 19px; /* 이 값은 폰트 사이즈에 따라 유연하게 변경될 수 있으므로, 필요에 따라 제거 고려 */
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+}

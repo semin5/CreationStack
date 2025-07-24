@@ -1,0 +1,105 @@
+.searching-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  justify-content: flex-end;
+  padding: 0px 32px;
+  position: relative;
+  width: 1280px;
+}
+
+.searching-wrapper .heading-and {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 768px;
+}
+
+.searching-wrapper .heading-wrapper {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.searching-wrapper .heading {
+  align-self: stretch;
+  color: #212121;
+  font-family: "Poppins", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.72px;
+  line-height: 44px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+}
+
+.searching-wrapper .our-philosophy-is {
+  align-self: stretch;
+  color: #212121;
+  font-family: "Poppins", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.searching-wrapper .search-bar-wrapper {
+  height: 52.46px;
+  position: relative;
+  width: 375.41px;
+}
+
+.searching-wrapper .search-bar-2 {
+  align-items: center;
+  border: 1.31px solid;
+  border-color: #d0d5dd;
+  border-radius: 5.25px;
+  display: flex;
+  gap: 10.49px;
+  height: 52px;
+  padding: 10.49px;
+  position: relative;
+  width: 375px;
+}
+
+.searching-wrapper .img {
+  height: 20.98px;
+  position: relative;
+  width: 20.98px;
+}
+
+.searching-wrapper .text-wrapper-4 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: black;
+  display: -webkit-box;
+  flex: 1;
+  font-family: "Poppins", Helvetica;
+  font-size: 17px;
+  font-weight: 400;
+  height: 23.61px;
+  letter-spacing: 0;
+  line-height: normal;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+
+.searching-wrapper .filtering-dropdown {
+  height: 38.71px;
+  position: relative;
+  width: 188px;
+}

@@ -1,0 +1,27 @@
+.userMainPage {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 71px;
+  padding: 70px 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  padding: 0 120px;
+}
+
+.title {
+  color: #1f1d1b;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 32px 0 50px 32px;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}

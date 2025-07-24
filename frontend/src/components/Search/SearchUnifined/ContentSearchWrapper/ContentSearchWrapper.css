@@ -1,0 +1,50 @@
+.content-search-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 화면 크기에 따라 유동적으로 너비 조절 */
+  max-width: 1200px; /* 최대 너비 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 0 16px;
+}
+
+.content-search-wrapper .content-search {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.content-search-wrapper .design-component-instance-node {
+  width: 100%;
+}
+
+.content-search-wrapper .heading-and-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.content-search-wrapper .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+}
+.no-search-result {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  padding: 100px 0;
+  height: 300px; /* 또는 min-height: 50vh; */
+  width: 100%;
+  /* 가운데 정렬을 위한 flex 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 부모 영역에 높이 확보 */
+  min-height: 300px;
+}
